@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet, RouterModule } from '@angular/router';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
-  selector: 'app-shell',
+  selector: 'ct-shell',
   standalone: true,
-  imports: [RouterOutlet, RouterModule, MatToolbarModule, MatButtonModule],
+  imports: [ButtonModule, RouterOutlet, RouterModule],
   templateUrl: './shell.html',
   styleUrls: ['./shell.scss'],
 })
