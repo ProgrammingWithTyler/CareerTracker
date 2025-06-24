@@ -1,16 +1,12 @@
 import { Routes } from '@angular/router';
-import { Shell } from './components/shell/shell';
+import { MainLayout } from './components/main-layout/main-layout';
 
 export const routes: Routes = [
   {
     path: '',
-    component: Shell,
+    component: MainLayout,
     children: [
-      {
-        path: '',
-        pathMatch: 'full',
-        redirectTo: 'dashboard',
-      },
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       {
         path: 'dashboard',
         loadComponent: () =>

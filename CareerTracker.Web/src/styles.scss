@@ -1,4 +1,12 @@
 @import "primeicons/primeicons.css";
+@import 'primeflex/primeflex.css';
+
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body.dark-mode {
+  background: #0f172a;
+  color: #f8fafc;
+}
+
