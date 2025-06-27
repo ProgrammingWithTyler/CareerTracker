@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Shell } from './shell';
+import { DataExportCardWidget } from './data-export-card.widget';
 
-describe('Shell', () => {
-  let component: Shell;
-  let fixture: ComponentFixture<Shell>;
+describe('DataExportCardWidget', () => {
+  let component: DataExportCardWidget;
+  let fixture: ComponentFixture<DataExportCardWidget>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Shell]
+      imports: [DataExportCardWidget]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Shell);
+    fixture = TestBed.createComponent(DataExportCardWidget);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

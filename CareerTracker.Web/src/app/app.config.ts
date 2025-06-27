@@ -29,7 +29,6 @@ import Aura from '@primeng/themes/aura';
 import { definePreset } from '@primeng/themes';
 import { provideAnimations } from '@angular/platform-browser/animations';
 
-// Define your custom preset
 const skyPreset = definePreset(Aura, {
   semantic: {
     primary: {

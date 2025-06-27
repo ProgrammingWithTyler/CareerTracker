@@ -8,8 +8,8 @@ import { MenuItem } from 'primeng/api';
 @Component({
   selector: 'ct-main-layout',
   standalone: true,
-  templateUrl: './main-layout.html',
-  styleUrls: ['./main-layout.scss'],
+  templateUrl: './main-layout.component.html',
+  styleUrls: ['./main-layout.component.scss'],
   imports: [
     RouterModule,
     RouterOutlet,
@@ -18,7 +18,7 @@ import { MenuItem } from 'primeng/api';
     SidebarModule,
   ],
 })
-export class MainLayout {
+export class MainLayoutComponent {
   menuItems: MenuItem[] = [];
   showSidebar = false;
 
