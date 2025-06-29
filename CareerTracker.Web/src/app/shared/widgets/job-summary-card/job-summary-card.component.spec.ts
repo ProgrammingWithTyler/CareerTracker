@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DataExportCardWidget } from './data-export-card.widget';
+import { JobSummaryCardComponent } from './job-summary-card.component';
 
-describe('DataExportCardWidget', () => {
-  let component: DataExportCardWidget;
-  let fixture: ComponentFixture<DataExportCardWidget>;
+describe('JobSummaryCardComponent', () => {
+  let component: JobSummaryCardComponent;
+  let fixture: ComponentFixture<JobSummaryCardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [DataExportCardWidget]
+      imports: [JobSummaryCardComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(DataExportCardWidget);
+    fixture = TestBed.createComponent(JobSummaryCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

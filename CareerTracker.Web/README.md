@@ -1,59 +1,95 @@
-# CareerTrackerWeb
+# 🎯 CareerTracker Web
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.3.
+**CareerTracker** is a modern, responsive job tracking and career management web application. Built with Angular 20 and PrimeNG 19, it helps users organize job applications, track interview stages, export reports, and stay motivated throughout the job hunt.
 
-## Development server
+This is the **frontend** for the CareerTracker platform.
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## 🚀 Tech Stack
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- **Framework**: Angular 20 (standalone components)
+- **UI**: PrimeNG + PrimeFlex + Aura Sky Theme
+- **Routing**: Standalone route config (Angular 15+ style)
+- **Component Design**: Widget-first architecture (per-page components and shared widgets)
+- **Dark Mode**: Fully supported via `.dark-mode` class
+- **A11y**: Accessible by default using PrimeNG's WAI-ARIA support
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🖼️ Architecture
 
-```bash
-ng generate component component-name
-```
+See [`docs/ArchitectureOverview.md`](./docs/ArchitectureOverview.md) and [`docs/UiUxStrategy.md`](./docs/UiUxStrategy.md) for technical breakdowns of routing, layout, component hierarchy, and design principles.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 🛠 Development Setup
 
-## Building
-
-To build the project run:
+### 📦 Install dependencies
 
 ```bash
-ng build
+npm install
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Then navigate to [http://locahost:4200](http://localhost:4200) in your browser.
 
-## Running unit tests
+The app reloads automatically with file changes.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+---
+
+## 📁 Folder Structure (Simplified)
+
+```plaintext
+src/
+├── app/
+│   ├── pages/            # Feature pages (dashboard, jobs, etc.)
+│   ├── shared/           # Reusable UI widgets
+│   ├── layout/           # Main layout shell
+│   ├── core/             # Services, models, core logic
+│   └── app.routes.ts     # Centralized routing configuration
+├── assets/
+├── styles/
+└── index.html
+```
+
+--
+
+## 🧪 Testing
+
+### Unit Tests
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+### End-to-End (E2E) Tests
 
-For end-to-end (e2e) testing, run:
+E2E setup is currently not included. You may integrate Cypress, Playwright, or WebdriverIO.
+
+---
+
+## 🧠 Component Scaffolding
+
+To generate a new component:
 
 ```bash
-ng e2e
+ng generate component pages/jobs/components/job-list --standalone
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Make sure to follow naming and folder conventions listed in `docs/ui-ux-strategy.md`.
 
-## Additional Resources
+---
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 🤝 Contributing
+
+This project is currently maintained by a solo developer as part of a professional portfolio. Contributions may be opened up in the future.
+
+## 📄 License
+
+MIT – see LICENSE file for details.
+
+## 📘 Resources
+
+- Angular CLI Reference
+- PrimeNG Components
+- PrimeFlex Utilities

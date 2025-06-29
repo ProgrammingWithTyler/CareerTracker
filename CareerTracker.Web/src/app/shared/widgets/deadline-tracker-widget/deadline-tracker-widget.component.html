@@ -1,0 +1,9 @@
+<p-card header="Upcoming Deadlines">
+  <ul class="p-0 m-0" style="list-style: none">
+    @for (item of deadlines; track $index) {
+    <li class="p-mb-2">
+      📌 {{ item.title }} — <strong>{{ item.due }}</strong>
+    </li>
+    }
+  </ul>
+</p-card>

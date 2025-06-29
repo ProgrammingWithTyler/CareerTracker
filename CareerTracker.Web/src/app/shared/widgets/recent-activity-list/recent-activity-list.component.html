@@ -1,0 +1,7 @@
+<p-card header="Recent Activity">
+  <ul class="p-0 m-0" style="list-style: none">
+    @for (activity of activities; track $index) {
+    <li class="p-mb-2">📝 {{ activity }}</li>
+    }
+  </ul>
+</p-card>
