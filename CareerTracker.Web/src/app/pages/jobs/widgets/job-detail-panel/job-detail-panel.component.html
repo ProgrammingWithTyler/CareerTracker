@@ -1,0 +1,61 @@
+<!-- <p-sidebar
+  [(visible)]="isVisible"
+  [modal]="true"
+  position="right"
+  [baseZIndex]="10000"
+  (onHide)="close.emit()"
+>
+  <p-card header="Job Details">
+    <div class="p-grid p-fluid">
+      <div class="p-col-4"><strong>Job Title:</strong></div>
+      <div class="p-col-8">{{ job.title }}</div>
+
+      <div class="p-col-4"><strong>Company:</strong></div>
+      <div class="p-col-8">{{ job.company }}</div>
+
+      <div class="p-col-4"><strong>Status:</strong></div>
+      <div class="p-col-8">{{ job.status }}</div>
+
+      <div class="p-col-4"><strong>Applied Date:</strong></div>
+      <div class="p-col-8">{{ job.appliedDate }}</div>
+
+      <div class="p-col-4"><strong>Source:</strong></div>
+      <div class="p-col-8">{{ job.source }}</div>
+
+      <div class="p-col-4"><strong>Notes:</strong></div>
+      <div class="p-col-8">{{ job.notes }}</div>
+    </div>
+
+    <button
+      pButton
+      type="button"
+      label="Close"
+      icon="pi pi-times"
+      (click)="close.emit()"
+      class="p-mt-3"
+    ></button>
+  </p-card>
+</p-sidebar> -->
+
+<p-sidebar
+  [visible]="job !== null"
+  [modal]="true"
+  position="right"
+  [baseZIndex]="10000"
+  (onHide)="close.emit()"
+  header="Job Details"
+>
+  <ng-container *ngIf="job">
+    <h3>{{ job.title }}</h3>
+    <p><strong>Company:</strong> {{ job.company }}</p>
+    <p><strong>Status:</strong> {{ job.status }}</p>
+    <p><strong>Applied Date:</strong> {{ job.appliedDate }}</p>
+
+    <button
+      pButton
+      label="Close"
+      class="p-button-text mt-3"
+      (click)="close.emit()"
+    ></button>
+  </ng-container>
+</p-sidebar>

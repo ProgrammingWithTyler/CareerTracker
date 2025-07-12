@@ -14,9 +14,9 @@
 
 <p-table
   [value]="jobs"
-  [paginator]="false"
-  [rows]="10"
-  responsiveLayout="scroll"
+  selectionMode="single"
+  [(selection)]="selectedJob"
+  (onRowSelect)="onJobSelected($event.data)"
 >
   <ng-template pTemplate="header">
     <tr>
@@ -27,7 +27,7 @@
     </tr>
   </ng-template>
   <ng-template pTemplate="body" let-job>
-    <tr>
+    <tr [pSelectableRow]="job">
       <td>{{ job.title }}</td>
       <td>{{ job.company }}</td>
       <td>
@@ -46,3 +46,31 @@
     </tr>
   </ng-template>
 </p-table>
+
+<ct-job-detail-panel [job]="selectedJob" (close)="selectedJob = null" />
+
+<!-- <p-table
+  [value]="jobs"
+  selectionMode="single"
+  [(selection)]="selectedJob"
+  (onRowSelect)="onJobSelected($event.data)"
+>
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Job Title</th>
+      <th>Company</th>
+      <th>Status</th>
+      <th>Applied Date</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-job>
+    <tr [pSelectableRow]="job">
+      <td>{{ job.title }}</td>
+      <td>{{ job.company }}</td>
+      <td>{{ job.status }}</td>
+      <td>{{ job.appliedDate }}</td>
+    </tr>
+  </ng-template>
+</p-table>
+
+<ct-job-detail-panel [job]="selectedJob" (close)="selectedJob = null" /> -->

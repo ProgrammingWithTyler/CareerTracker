@@ -6,6 +6,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { Job } from '../../models/job.model';
 import { FormsModule } from '@angular/forms';
+import { JobDetailPanelComponent } from './widgets/job-detail-panel/job-detail-panel.component';
 
 @Component({
   selector: 'app-jobs-page',
@@ -17,6 +18,7 @@ import { FormsModule } from '@angular/forms';
     InputTextModule,
     ButtonModule,
     FormsModule,
+    JobDetailPanelComponent,
   ],
   templateUrl: './jobs.page.html',
   styleUrls: ['./jobs.page.scss'],
@@ -47,4 +49,10 @@ export class JobsPage {
   ];
 
   filterText = '';
+
+  selectedJob: any = null;
+
+  onJobSelected(job: any) {
+    this.selectedJob = job;
+  }
 }
