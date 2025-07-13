@@ -17,7 +17,7 @@
       <div class="p-col-8">{{ job.status }}</div>
 
       <div class="p-col-4"><strong>Applied Date:</strong></div>
-      <div class="p-col-8">{{ job.appliedDate }}</div>
+      <div class="p-col-8">{{ job.appliedDate | date }}</div>
 
       <div class="p-col-4"><strong>Source:</strong></div>
       <div class="p-col-8">{{ job.source }}</div>
@@ -49,7 +49,9 @@
     <h3>{{ job.title }}</h3>
     <p><strong>Company:</strong> {{ job.company }}</p>
     <p><strong>Status:</strong> {{ job.status }}</p>
-    <p><strong>Applied Date:</strong> {{ job.appliedDate }}</p>
+    <p><strong>Applied Date:</strong> {{ job.appliedDate | date }}</p>
+    <p><strong>Source:</strong> {{ job.source }}</p>
+    <p><strong>Notes:</strong> {{ job.notes }}</p>
 
     <button
       pButton

@@ -1,0 +1,67 @@
+<p-dialog
+  [(visible)]="showModal"
+  modal="true"
+  header="Add Job"
+  [style]="{ width: '50vw', height: '357w' }"
+  [breakpoints]="{ '960px': '75vw', '640px': '95vw' }"
+  [dismissableMask]="true"
+  (onHide)="close()"
+>
+  <form [formGroup]="jobForm" class="p-fluid">
+    <div class="form-field">
+      <label for="title">Job Title</label>
+      <input id="title" type="text" pInputText formControlName="title" />
+    </div>
+
+    <div class="form-field">
+      <label for="company">Company</label>
+      <input id="company" type="text" pInputText formControlName="company" />
+    </div>
+
+    <div class="form-field">
+      <label for="status">Status</label>
+      <p-dropdown
+        formControlName="status"
+        [options]="statusOptions"
+        placeholder="Select a status"
+      ></p-dropdown>
+    </div>
+
+    <div class="form-field">
+      <label for="appliedDate">Applied Date</label>
+      <p-calendar
+        formControlName="appliedDate"
+        inputId="appliedDate"
+        dateFormat="yy-mm-dd"
+        showIcon
+      ></p-calendar>
+    </div>
+
+    <div class="form-field">
+      <label for="source">Source</label>
+      <p-dropdown
+        formControlName="source"
+        [options]="sourceOptions"
+        placeholder="Select source"
+      ></p-dropdown>
+    </div>
+
+    <div class="form-field">
+      <label for="jobUrl">Job URL</label>
+      <input
+        id="jobUrl"
+        type="url"
+        pInputText
+        formControlName="jobUrl"
+        class="w-full"
+      />
+    </div>
+
+    <div class="p-dialog-footer">
+      <button pButton class="p-button-text" type="button" (click)="close()">
+        Cancel
+      </button>
+      <button pButton type="submit" [disabled]="!jobForm.valid">Save</button>
+    </div>
+  </form>
+</p-dialog>

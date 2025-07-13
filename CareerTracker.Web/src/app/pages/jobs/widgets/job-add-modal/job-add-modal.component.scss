@@ -1,0 +1,11 @@
+/* src/styles.scss or component SCSS */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem; // spacing between fields
+}
+
+.form-field label {
+  margin-bottom: 0.25rem; // spacing between label and input
+  font-weight: 500;
+}
